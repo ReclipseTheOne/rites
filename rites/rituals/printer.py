@@ -86,7 +86,7 @@ class Printer:
         string = ""
         for substr in txt:
             string += str(substr) + " "
-        print(f"{self.get_style("warning").get_str()} {Fore.white}{string}{Style.reset}")
+        print(f"{self.get_style('warning').get_str()} {Fore.white}{string}{Style.reset}")
 
     def print_error(self, *txt):
         """ Prints an error message
@@ -97,7 +97,7 @@ class Printer:
         string = ""
         for substr in txt:
             string += str(substr) + " "
-        print(f"{self.get_style("error").get_str()} {Fore.white}{string}{Style.reset}")
+        print(f"{self.get_style('error').get_str()} {Fore.white}{string}{Style.reset}")
 
     def print_debug(self, *txt):
         """ Prints a debug message
@@ -108,7 +108,7 @@ class Printer:
         string = ""
         for substr in txt:
             string += str(substr) + " "
-        print(f"{self.get_style("debug").get_str()} {Fore.white}{string}{Style.reset}")
+        print(f"{self.get_style('debug').get_str()} {Fore.white}{string}{Style.reset}")
 
     def print_info(self, *txt):
         """ Prints an info message
@@ -119,7 +119,7 @@ class Printer:
         string = ""
         for substr in txt:
             string += str(substr) + " "
-        print(f"{self.get_style("info").get_str()} {Fore.white}{string}{Style.reset}")
+        print(f"{self.get_style('info').get_str()} {Fore.white}{string}{Style.reset}")
 
     def print_success(self, *txt):
         """ Prints a success message
@@ -130,7 +130,7 @@ class Printer:
         string = ""
         for substr in txt:
             string += str(substr) + " "
-        print(f"{self.get_style("success").get_str()} {Fore.white}{string}{Style.reset}")
+        print(f"{self.get_style('success').get_str()} {Fore.white}{string}{Style.reset}")
 
     def print_custom(self, style_key: str, *txt):
         """ Prints a message using the Style specified

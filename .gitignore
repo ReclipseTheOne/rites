@@ -3,10 +3,8 @@
 logs
 dist
 build
-rites/test.py
 rites/testfolder
 rites.egg-info
 
 # No caching in this part of town
 __pycache__
-test.py

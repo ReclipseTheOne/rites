@@ -85,7 +85,7 @@ class Logger:
             Returns:
                 str: The formatted timestamp
         """
-        return f"{Fore.white}[{Style.reset}{self.printer.get_color("gray")}{self._get_inline_formatted_timestamp()}{Style.reset}{Fore.white}]{Style.reset}"
+        return f"{Fore.white}[{Style.reset}{self.printer.get_color('gray')}{self._get_inline_formatted_timestamp()}{Style.reset}{Fore.white}]{Style.reset}"
 
     def formatted_name(self) -> str:
         """ Returns a printable colored name
@@ -93,7 +93,7 @@ class Logger:
         Returns:
             str: The formatted name
         """
-        return f"{self.printer.get_color("gray")}{self.name}{Style.reset}"
+        return f"{self.printer.get_color('gray')}{self.name}{Style.reset}"
 
     def add_custom(self, key: str, word: str, r: int, g: int, b: int):
         self.printer.add_style(key, word, r, g, b)
@@ -113,7 +113,7 @@ class Logger:
             string = " ".join(str(item) for item in txt)
 
         msg =  f"{self.printable_timestamp()} [{self.formatted_name()}] {self.printer.get_style(style_key).get_str()} {string}"
-        
+
         if self.should_print_to_console:
             print(msg)
         if self.should_log_to_file:
@@ -168,18 +168,18 @@ class Logger:
         """ Sets whether the logger should log to file"""
         self.should_log_to_file = should_log
         return self
-    
+
     def dont_show_exit_message(self) -> "Logger":
         """ Disables the exit message that is printed when the program exits"""
         self.handles_exit_message = False
         return self
-    
+
     def disable(self) -> "Logger":
         """ Disables the logger from logging to file and printing to console"""
         self.should_print_to_console = False
         self.should_log_to_file = False
         return self
-    
+
     def enable(self) -> "Logger":
         """ Enables the logger to log to file and print to console"""
         self.should_print_to_console = True
